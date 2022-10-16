@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+from sys import argv
+
+
+def factor():
+    with open(argv[1]) as f:
+        lines = [int(line.rstrip()) for line in f]
+        for n in lines:
+            if (n % 10) == 0:
+                q = n/10
+                print("{}={}*{}".format(n, 10, int(q)), end='\n')
+            elif (n % 9) == 0:
+                q = n/9
+                print("{}={}*{}".format(n, 9, int(q)), end='\n')
+            elif (n % 8) == 0:
+                q = n/8
+                print("{}={}*{}".format(n, 8, int(q)), end='\n')
+            elif (n % 7) == 0:
+                q = n/7
+                print("{}={}*{}".format(n, 7, int(q)), end='\n')
+            elif (n % 6) == 0:
+                q = n/6
+                print("{}={}*{}".format(n, 6, int(q)), end='\n')
+            elif (n % 5) == 0:
+                q = n/5
+                print("{}={}*{}".format(n, 5, int(q)), end='\n')
+            elif (n % 4) == 0:
+                q = n/4
+                print("{}={}*{}".format(n, 4, int(q)), end='\n')
+            elif (n % 3) == 0:
+                q = n/3
+                print("{}={}*{}".format(n, 3, int(q)), end='\n')
+            elif (n % 2) == 0:
+                q = n/2
+                print("{}={}*{}".format(n, 2, int(q)), end='\n')
+            elif (n % 1) == 0:
+                q = n/1
+                print("{}={}*{}".format(n, 1, int(q)), end='\n')
+
+
+factor()
